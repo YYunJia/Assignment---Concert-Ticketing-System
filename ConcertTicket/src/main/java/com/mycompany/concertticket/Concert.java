@@ -3,6 +3,7 @@ package com.mycompany.concertticket;
 
 public class Concert {
     private String Name;
+    private String Assistant;
     private String Date;
     private String Venue;
     private double TicketPrice;
