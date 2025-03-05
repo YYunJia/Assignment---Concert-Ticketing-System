@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="AdminSite.aspx" />
     <Content Include="App_Data\STARCONCERT.MDF" />
+    <Content Include="ConcertTicket.aspx" />
+    <Content Include="ConcertTicket.css" />
     <Content Include="Design\MasterDeisgn.css" />
     <Content Include="Images\133604343841684229.jpg" />
     <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
@@ -145,8 +147,16 @@
     <Compile Include="AdminSite.aspx.designer.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ConcertTicket.aspx.cs">
+      <DependentUpon>ConcertTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConcertTicket.aspx.designer.cs">
+      <DependentUpon>ConcertTicket.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerMaster.Master.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerMaster.Master.designer.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>

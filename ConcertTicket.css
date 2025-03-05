@@ -1,0 +1,121 @@
+﻿.concert-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .concert-card:hover {
+        transform: scale(1.02);
+    }
+
+.concert-date {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #ff4081;
+    min-width: 80px;
+}
+
+.day {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.month-year {
+    font-size: 14px;
+    color: #555;
+}
+
+.time {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Adjust Image */
+.concert-image {
+    flex-shrink: 0;
+    margin: 0 15px;
+}
+
+.concert-img {
+    width: 100px; /* Increase size */
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ff4081;
+}
+
+/* Adjust Details */
+.concert-details {
+    flex-grow: 1;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.artist {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 3px;
+}
+
+.venue {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Button Styles */
+.concert-button {
+    text-align: right;
+}
+
+.btn-find-tickets {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+    .btn-find-tickets:hover {
+        background: #e6005c;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .concert-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .concert-date, .concert-image, .concert-details, .concert-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .concert-img {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0;
+    }
+
+    .btn-find-tickets {
+        width: 100%;
+    }
+}
