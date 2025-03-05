@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CustomerMaster.master.cs" Inherits="WebAssignment.CustomerMaster" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>StarConcert - Customer</title>
+    <link rel="stylesheet" type="text/css" href="Design/MasterDeisgn.css" />
+    <link rel="stylesheet" type="text/css" href="Design/LoginPage.css" />
+    <link rel="stylesheet" type="text/css" href="Design/Register.css" />
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+        <!-- Header Section -->
+        <div id="header">
+            <div>
+                <img src="Image/logo.png" alt="StarConcert Logo" />
+            </div>
+            <div class="right-section">
+                 <!-- Login/Register Button -->
+                <asp:LinkButton ID="btnLoginRegister" runat="server"  
+                         Style="color: black; font-size: 18px; font-weight: bold; margin-right: 15px;"
+                        OnClick="btnLoginRegister_Click">
+                     <span style="vertical-align: middle;">Login/Register</span>
+                </asp:LinkButton>
+
+                <!-- Profile Image Button -->
+                <asp:ImageButton ID="btnProfile" runat="server" ImageUrl="~/Image/profile.png" Width="30px" 
+                     PostBackUrl="~/Profile.aspx" Style="vertical-align: middle;"/>
+
+            &nbsp;&nbsp;
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navigation">
+            <asp:HyperLink ID="lnkEvents" runat="server" NavigateUrl="~/MainPage.aspx">Events</asp:HyperLink>
+            <asp:HyperLink ID="lnkNews" runat="server" NavigateUrl="~/News.aspx">News</asp:HyperLink>
+            <asp:HyperLink ID="lnkMembership" runat="server" NavigateUrl="~/Membership.aspx">Membership</asp:HyperLink>
+        </div>
+
+        <!-- Content Section -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <p>
+                <br />
+        </asp:ContentPlaceHolder>
+
+        <!-- Footer Section -->
+        <footer>
+            <div style="padding: 20px 0; background-color: #1c1a1b; color: #f5f5f5; text-align: center;">
+                <!-- Footer Links -->
+                <p>
+                    <a href="/FAQ" style="color: #f5f5f5; text-decoration: none;">FAQ</a> | 
+                    <a href="aboutUs.aspx" style="color: #f5f5f5; text-decoration: none;">About Us</a> | 
+                    <a href="/terms" style="color: #f5f5f5; text-decoration: none;">Terms and Conditions</a> | 
+                    <a href="/privacy" style="color: #f5f5f5; text-decoration: none;">Privacy Policy</a>
+                </p>
+        
+                <!-- Social Media Links -->  
+                <p>
+                    Follow Us: 
+                    <a href="https://www.instagram.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
+                        <img src="Image/facebook.png" alt="Facebook" class="social-icon" /> 
+                    </a> 
+                    <a href="https://www.facebook.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
+                        <img src="Image/instagram.png" alt="Instagram" class="social-icon" />
+                    </a>
+                </p>
+        
+                <!-- Copyright Notice -->
+                <p style="font-size: 12px; color: #C0C0C0; font-style: italic;">
+                    Copyright © StarConcert SDN BHD. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
