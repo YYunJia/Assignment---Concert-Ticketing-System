@@ -68,10 +68,73 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminSite.aspx" />
-    <Content Include="App_Data\NORTHWND.MDF" />
-    <Content Include="App_Data\NORTHWND_log.ldf">
-      <DependentUpon>NORTHWND.MDF</DependentUpon>
-    </Content>
+    <Content Include="App_Data\STARCONCERT.MDF" />
+    <Content Include="App_Data\STARCONCERT_log.ldf" />
+    <Content Include="Design\MasterDeisgn.css" />
+    <Content Include="Images\133604343841684229.jpg" />
+    <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
+    <Content Include="Images\275073240_329766082466790_6972892228753778446_n.png" />
+    <Content Include="Images\399354508_631472275862932_186870469805975219_n.jpg" />
+    <Content Include="Images\399556623_730157545810741_3834671539741822249_n.jpg" />
+    <Content Include="Images\aboutUs1.png" />
+    <Content Include="Images\aboutUs2.png" />
+    <Content Include="Images\aboutUs3.png" />
+    <Content Include="Images\aboutUs4.png" />
+    <Content Include="Images\alipay.png" />
+    <Content Include="Images\awardsBackground.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\beyonce%28h%29.png" />
+    <Content Include="Images\beyonce%28v%29.png" />
+    <Content Include="Images\beyonce.jpg" />
+    <Content Include="Images\Beyonce.png" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\calendarr.png" />
+    <Content Include="Images\cart.png" />
+    <Content Include="Images\closeButton.png" />
+    <Content Include="Images\ed sh.png" />
+    <Content Include="Images\ED SHEERAN%28h%29.png" />
+    <Content Include="Images\ed-sheeran_hero_case_study.png" />
+    <Content Include="Images\EdSheeran.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\FutureSound.png" />
+    <Content Include="Images\GOLDEN HOUR %28h%29.png" />
+    <Content Include="Images\GOLDEN HOUR%28v%29.png" />
+    <Content Include="Images\imagine dragon%28h%29.png" />
+    <Content Include="Images\imagine dragon%28v%29.png" />
+    <Content Include="Images\ImagineDragon.png" />
+    <Content Include="Images\instagram.png" />
+    <Content Include="Images\Kacey.png" />
+    <Content Include="Images\Kacey_Musgraves_-_Golden_Hour.png" />
+    <Content Include="Images\km poster.png" />
+    <Content Include="Images\location.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\m-background.png" />
+    <Content Include="Images\m-meatandgreet.jpg" />
+    <Content Include="Images\m-soundcheck.jpg" />
+    <Content Include="Images\mastercard.png" />
+    <Content Include="Images\new2.png" />
+    <Content Include="Images\news1.png" />
+    <Content Include="Images\profile.png" />
+    <Content Include="Images\QR.png" />
+    <Content Include="Images\Screenshot 2024-12-11 214731.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\seatAxiataArena.jpeg" />
+    <Content Include="Images\seatNationalStadium.jpeg" />
+    <Content Include="Images\seatStarsGenting.jpeg" />
+    <Content Include="Images\signedphoto.jpg" />
+    <Content Include="Images\taylor%28hori%29.png" />
+    <Content Include="Images\Taylor%28Map%29.png" />
+    <Content Include="Images\Taylor%28seat%29.png" />
+    <Content Include="Images\taylor%28ver%29.png" />
+    <Content Include="Images\Taylor.jpg" />
+    <Content Include="Images\THE WEEKND %28v%29.png" />
+    <Content Include="Images\the weeknd%28h%29.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\tng.png" />
+    <Content Include="Images\Venue1.jpeg" />
+    <Content Include="Images\visa.png" />
+    <Content Include="Images\WhatsApp Image 2024-12-30 at 01.35.19_a880b0c6.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,9 +145,16 @@
     <Compile Include="AdminSite.aspx.designer.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerMaster.Master.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMaster.Master.designer.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomerMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
