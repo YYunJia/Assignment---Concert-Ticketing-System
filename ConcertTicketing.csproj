@@ -134,6 +134,7 @@
     <Content Include="Images\Venue1.jpeg" />
     <Content Include="Images\visa.png" />
     <Content Include="Images\WhatsApp Image 2024-12-30 at 01.35.19_a880b0c6.jpg" />
+    <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,13 @@
       <DependentUpon>CustomerMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerMaster.Master" />
