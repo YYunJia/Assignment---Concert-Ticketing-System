@@ -10,7 +10,7 @@
 }
 
     .concert-card:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
     }
 
 .concert-date {
@@ -18,39 +18,38 @@
     padding: 10px;
     font-weight: bold;
     color: #ff4081;
-    min-width: 80px;
+    min-width: 90px; 
 }
 
 .day {
-    font-size: 18px;
+    font-size: 40px;
     font-weight: bold;
+    display: block;
 }
 
 .month-year {
-    font-size: 14px;
+    font-size: 24px; 
     color: #555;
 }
 
 .time {
-    font-size: 12px;
+    font-size: 20px; 
     color: gray;
 }
 
-/* Adjust Image */
 .concert-image {
     flex-shrink: 0;
-    margin: 0 15px;
+    margin: 0 20px; 
 }
 
 .concert-img {
-    width: 100px; /* Increase size */
-    height: 100px;
+    width: 350px; 
+    height: 450px;
     border-radius: 8px;
     object-fit: cover;
     border: 2px solid #ff4081;
 }
 
-/* Adjust Details */
 .concert-details {
     flex-grow: 1;
     padding: 10px 15px;
@@ -59,25 +58,24 @@
 }
 
 .title {
-    font-size: 18px;
+    font-size: 28px; 
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
 }
 
 .artist {
-    font-size: 14px;
+    font-size: 24px; 
     color: gray;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .venue {
-    font-size: 14px;
+    font-size: 22px; 
     font-weight: bold;
     color: #444;
 }
 
-/* Button Styles */
 .concert-button {
     text-align: right;
 }
@@ -86,18 +84,41 @@
     background: #ff4081;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px; 
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s ease-in-out;
+    font-size: 16px; 
 }
 
     .btn-find-tickets:hover {
         background: #e6005c;
     }
 
-/* Responsive Design */
+@media (max-width: 1024px) {
+    .concert-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .concert-date, .concert-image, .concert-details, .concert-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .concert-img {
+        width: 250px; 
+        height: 300px;
+        margin: 10px 0;
+    }
+
+    .btn-find-tickets {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .concert-card {
         flex-direction: column;
@@ -110,12 +131,17 @@
     }
 
     .concert-img {
-        width: 80px;
-        height: 80px;
+        width: 180px; 
+        height: 220px;
         margin: 10px 0;
     }
 
     .btn-find-tickets {
         width: 100%;
+        padding: 12px;
+    }
+
+    .title, .artist, .venue {
+        font-size: 18px; 
     }
 }
