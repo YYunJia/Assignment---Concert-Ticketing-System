@@ -70,6 +70,7 @@
     <Content Include="AdminSite.aspx" />
     <Content Include="App_Data\STARCONCERT.MDF" />
     <Content Include="Design\MasterDeisgn.css" />
+    <Content Include="Design\Register.css" />
     <Content Include="Images\133604343841684229.jpg" />
     <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
     <Content Include="Images\275073240_329766082466790_6972892228753778446_n.png" />
