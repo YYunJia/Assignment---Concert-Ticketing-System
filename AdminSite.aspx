@@ -15,7 +15,7 @@
             </div>
             <div class="right-section">
                 <asp:ImageButton ID="btnSearch" runat="server" ImageUrl="~/Images/search.png" Width="30px" />
-                <!-- Login/Register Button -->
+                
                 <asp:LinkButton ID="btnLoginRegister" runat="server" PostBackUrl="~/LoginPage.aspx"
                     Style="color: black; font-size: 18px; font-weight: bold; margin-right: 15px;">
                      <span style="vertical-align: middle;">Login/Register</span>
