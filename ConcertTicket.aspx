@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMaster.Master" AutoEventWireup="true" CodeBehind="ConcertTicket.aspx.cs" Inherits="ConcertTicketing.ConcertTicket" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-       <link rel="stylesheet" type="text/css" href="ConcertTicket.css" />
+           <link rel="stylesheet" type="text/css" href="ConcertTicket.css" />
 
         <itemtemplate>
        <div class="concert-card">
@@ -61,6 +61,48 @@
         </div>
         <div class="concert-button">
             <asp:Button ID="Button1" runat="server" CssClass="btn-find-tickets" Text="View Concert" CommandArgument='<%# Eval("ConcertID") %>' />
+        </div>
+    </div>
+</itemtemplate>
+
+        <itemtemplate>
+    <div class="concert-card">
+        <div class="concert-date">
+            <asp:Label ID="Label13" runat="server" Text="SUN" CssClass="day" />
+            <asp:Label ID="Label14" runat="server" Text="10/Dec/2024" CssClass="month-year" />
+            <asp:Label ID="Label15" runat="server" Text="20:00" CssClass="time" />
+        </div>
+        <div class="concert-image">
+            <asp:Image ID="Image3" runat="server" src="Images/taylor(ver).png" CssClass="concert-img" />
+        </div>
+        <div class="concert-details">
+            <asp:Label ID="Label16" runat="server" Text="A Night To Remember" CssClass="title" />
+            <asp:Label ID="Label17" runat="server" Text="Artist: Taylor Swift" CssClass="artist" />
+            <asp:Label ID="Label18" runat="server" Text="Star Genting | Genting Highland | Malaysia" CssClass="venue" />
+        </div>
+        <div class="concert-button">
+            <asp:Button ID="Button3" runat="server" CssClass="btn-find-tickets" Text="View Concert" CommandArgument='<%# Eval("ConcertID") %>' />
+        </div>
+    </div>
+</itemtemplate>
+
+            <itemtemplate>
+    <div class="concert-card">
+        <div class="concert-date">
+            <asp:Label ID="Label19" runat="server" Text="SUN" CssClass="day" />
+            <asp:Label ID="Label20" runat="server" Text="20/Jan/2025" CssClass="month-year" />
+            <asp:Label ID="Label21" runat="server" Text="20:00" CssClass="time" />
+        </div>
+        <div class="concert-image">
+            <asp:Image ID="Image4" runat="server" src="Images/imagine dragon(h).png" CssClass="concert-img" />
+        </div>
+        <div class="concert-details">
+            <asp:Label ID="Label22" runat="server" Text="Imagination" CssClass="title" />
+            <asp:Label ID="Label23" runat="server" Text="Artist: Imagine Dragon" CssClass="artist" />
+            <asp:Label ID="Label24" runat="server" Text="Natianal Stadium | Bukit Jalil, Malaysia" CssClass="venue" />
+        </div>
+        <div class="concert-button">
+            <asp:Button ID="Button4" runat="server" CssClass="btn-find-tickets" Text="View Concert" CommandArgument='<%# Eval("ConcertID") %>' />
         </div>
     </div>
 </itemtemplate>
