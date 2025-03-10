@@ -149,6 +149,7 @@
     </Compile>
     <Compile Include="CustomerMaster.Master.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerMaster.Master.designer.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>

@@ -80,6 +80,18 @@ body {
             background-color: #f875aa;
         }
 
+    /* Forgot Password Link (optional) */
+    .register-container .forgot-password {
+        font-size: 12px;
+        color: #fa2f95;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+        .register-container .forgot-password:hover {
+            text-decoration: underline;
+        }
 
     /* Footer Text */
     .register-container .footer-text {
@@ -97,6 +109,13 @@ body {
                 text-decoration: underline;
             }
 
+
+.success-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: green; /* You can change the color to suit your design */
+    margin-bottom: 20px;
+}
 
 /* Position Dropdown List Styles */
 .register-container .input-field select {
