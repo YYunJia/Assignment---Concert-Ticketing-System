@@ -3,75 +3,86 @@
     align-items: center;
     background: #fff;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
     .concert-card:hover {
-        transform: scale(1.05);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     }
 
 .concert-date {
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
     color: #ff4081;
-    min-width: 90px; 
+    min-width: 100px;
 }
 
 .day {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     display: block;
+    color: #ff4081;
 }
 
 .month-year {
-    font-size: 24px; 
-    color: #555;
+    font-size: 22px;
+    color: #777;
+    font-weight: 600;
 }
 
 .time {
-    font-size: 20px; 
-    color: gray;
+    font-size: 18px;
+    color: #888;
 }
 
 .concert-image {
     flex-shrink: 0;
-    margin: 0 20px; 
+    margin: 0 25px;
 }
 
 .concert-img {
-    width: 350px; 
-    height: 450px;
+    width: 320px;
+    height: 420px;
     border-radius: 8px;
     object-fit: cover;
-    border: 2px solid #ff4081;
+    border: 3px solid #ff4081;
+    transition: transform 0.3s ease-in-out;
+}
+
+.concert-card:hover .concert-img {
+    transform: scale(1.05);
 }
 
 .concert-details {
     flex-grow: 1;
-    padding: 10px 15px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .title {
-    font-size: 28px; 
+    font-size: 30px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .artist {
-    font-size: 24px; 
-    color: gray;
+    font-size: 22px;
+    color: #666;
+    font-style: italic;
     margin-bottom: 5px;
 }
 
 .venue {
-    font-size: 22px; 
+    font-size: 20px;
     font-weight: bold;
     color: #444;
 }
@@ -84,64 +95,67 @@
     background: #ff4081;
     color: white;
     border: none;
-    padding: 10px 20px; 
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease-in-out;
-    font-size: 16px; 
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
     .btn-find-tickets:hover {
         background: #e6005c;
+        transform: scale(1.05);
     }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 @media (max-width: 1024px) {
     .concert-card {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .concert-date, .concert-image, .concert-details, .concert-button {
-        width: 100%;
+        align-items: center;
         text-align: center;
-    }
-
-    .concert-img {
-        width: 250px; 
-        height: 300px;
-        margin: 10px 0;
-    }
-
-    .btn-find-tickets {
-        width: 100%;
         padding: 15px;
     }
-}
 
-@media (max-width: 768px) {
-    .concert-card {
-        flex-direction: column;
-        align-items: flex-start;
+    .concert-image {
+        margin: 15px 0;
     }
 
-    .concert-date, .concert-image, .concert-details, .concert-button {
-        width: 100%;
-        text-align: center;
+    .concert-details {
+        align-items: center;
     }
 
-    .concert-img {
-        width: 180px; 
-        height: 220px;
-        margin: 10px 0;
-    }
-
-    .btn-find-tickets {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .title, .artist, .venue {
-        font-size: 18px; 
+    .concert-button {
+        margin-top: 10px;
     }
 }
