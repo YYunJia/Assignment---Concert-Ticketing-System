@@ -22,7 +22,7 @@
         <!-- Header Section -->
         <div id="header">
             <div>
-                <img src="Image/logo.png" alt="StarConcert Logo" />
+                <img src="Images/logo.png" alt="StarConcert Logo" />
             </div>
             <div class="right-section">
                  <!-- Login/Register Button -->
@@ -33,7 +33,7 @@
                 </asp:LinkButton>
 
                 <!-- Profile Image Button -->
-                <asp:ImageButton ID="btnProfile" runat="server" ImageUrl="~/Image/profile.png" Width="30px" 
+                <asp:ImageButton ID="btnProfile" runat="server" ImageUrl="~/Images/profile.png" Width="30px" 
                      PostBackUrl="~/Profile.aspx" Style="vertical-align: middle;"/>
 
             &nbsp;&nbsp;
@@ -68,10 +68,10 @@
                 <p>
                     Follow Us: 
                     <a href="https://www.instagram.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
-                        <img src="Image/facebook.png" alt="Facebook" class="social-icon" /> 
+                        <img src="Images/facebook.png" alt="Facebook" class="social-icon" /> 
                     </a> 
                     <a href="https://www.facebook.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
-                        <img src="Image/instagram.png" alt="Instagram" class="social-icon" />
+                        <img src="Images/instagram.png" alt="Instagram" class="social-icon" />
                     </a>
                 </p>
         
