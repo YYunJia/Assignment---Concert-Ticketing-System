@@ -36,7 +36,9 @@
         <!-- Register Button -->
         <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn" OnClick="btnRegister_Click" />
 
-      
+        <!-- Already Have an Account -->
+        <div class="footer-text">
+            Already have an account? <a href="LoginPage.aspx">Login</a>
         </div>
     </div>
 </asp:Content>
