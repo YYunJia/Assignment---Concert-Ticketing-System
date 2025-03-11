@@ -66,6 +66,9 @@
   <ItemGroup>
     <Content Include="AdminSite.aspx" />
     <Content Include="App_Data\STARCONCERT.MDF" />
+    <Content Include="App_Data\STARCONCERT_log.ldf">
+      <DependentUpon>STARCONCERT.MDF</DependentUpon>
+    </Content>
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
     <Content Include="Design\MasterDeisgn.css" />
