@@ -5,8 +5,8 @@
 
         <!-- Name (User Input) -->
         <div class="input-field">
-            <label for="txtName">Full Name <span style="color: red;">*</span></label>
-            <asp:TextBox ID="txtName" runat="server" CssClass="form-control" Required="true" MaxLength="100"></asp:TextBox>
+            <label for="txtName">Full Name <span style="color: darkred;">*</span></label>
+            <asp:TextBox ID="txtName" runat="server" CssClass="form-control" Required="true" MaxLength="100" Placeholder="Enter your name"></asp:TextBox>
             <asp:RequiredFieldValidator 
                 ID="rfvName" 
                 runat="server" 
@@ -18,8 +18,8 @@
 
         <!-- Email (User Input) -->
         <div class="input-field">
-            <label for="txtEmail">Email Address <span style="color: red;">*</span></label>
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Required="true" MaxLength="100" TextMode="Email"></asp:TextBox>
+            <label for="txtEmail">Email Address <span style="color: darkred;">*</span></label>
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Required="true" MaxLength="100" TextMode="Email" Placeholder="Enter your email (e.g., example@gmail.com)"></asp:TextBox>
             <asp:RequiredFieldValidator 
                 ID="rfvEmail" 
                 runat="server" 
@@ -40,8 +40,8 @@
 
         <!-- Contact (User Input) -->
         <div class="input-field">
-            <label for="txtContact">Contact Number <span style="color: red;">*</span></label>
-            <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" MaxLength="50" Placeholder=" (e.g., 0101234567)"></asp:TextBox>
+            <label for="txtContact">Contact Number <span style="color: darkred;">*</span></label>
+            <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" MaxLength="50" Placeholder="Enter your contact number (e.g., 0101234567)"></asp:TextBox>
             <asp:RequiredFieldValidator 
                 ID="rfvContact" 
                 runat="server" 
@@ -62,8 +62,8 @@
 
         <!-- Password (User Input) -->
         <div class="input-field">
-            <label for="txtPassword">Password <span style="color: red;">*</span></label>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" Required="true" MaxLength="255"></asp:TextBox>
+            <label for="txtPassword">Password <span style="color: darkred;">*</span></label>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" Required="true" MaxLength="255" Placeholder="At least 8 chars, 1 uppercase, 1 number, 1 symbol"></asp:TextBox>
             <asp:RequiredFieldValidator 
                 ID="regPassword" 
                 runat="server" 
@@ -71,12 +71,20 @@
                 ForeColor="Red" 
                 ErrorMessage="Password is required." 
                 Display="Dynamic" />
+            <asp:RegularExpressionValidator
+                ID="regPasswordStrength"
+                runat="server"
+                ControlToValidate="txtPassword"
+                ValidationExpression="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                ForeColor="Red"
+                ErrorMessage="Password must be at least 8 characters, include an uppercase letter, a number, and a special character."
+                Display="Dynamic" />
         </div>
 
         <!-- Confirm Password (User Input for Validation) -->
         <div class="input-field">
-            <label for="txtConfirmPassword">Confirm Password <span style="color: red;">*</span></label>
-            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" CssClass="form-control" Required="true" MaxLength="255"></asp:TextBox>
+            <label for="txtConfirmPassword">Confirm Password <span style="color: darkred;">*</span></label>
+            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" CssClass="form-control" Required="true" MaxLength="255"  Placeholder="Re-enter your password"></asp:TextBox>
             <asp:CompareValidator 
                 ID="cvConfirmPassword"
                 runat="server"
@@ -94,7 +102,7 @@
                 Display="Dynamic" />
         </div>
 
-        <!-- Role (Hidden, predefined as 'Customer') -->
+        <!-- Role (Hidden or predefined as 'Customer') -->
         <div class="input-field" style="display:none;">
             <asp:TextBox ID="txtRole" runat="server" CssClass="form-control" Text="Customer" ReadOnly="true"></asp:TextBox>
         </div>
