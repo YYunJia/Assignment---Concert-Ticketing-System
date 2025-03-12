@@ -7,6 +7,7 @@
     <title>StarConcert - Staff</title>
     <link rel="stylesheet" type="text/css" href="Design/MasterDeisgn.css" />
     <link rel="stylesheet" type="text/css" href="Design/Register.css" />
+    <link rel="stylesheet" type="text/css" href="Design/AdminSite.css" />
 </head>
 <body>
     <form id="form1" runat="server">
