@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMaster.Master" AutoEventWireup="true" CodeBehind="ConcertTicket.aspx.cs" Inherits="ConcertTicketing.ConcertTicket" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <html>
     <head>
         <title>Event Card</title>
@@ -13,5 +12,4 @@
         <asp:PlaceHolder ID="EventContainer" runat="server"></asp:PlaceHolder>
     </body>
     </html>
-
 </asp:Content>
