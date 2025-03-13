@@ -143,5 +143,30 @@
               
            </div>
         </div>
-       </div>
+       
+        <div class="payment-details">
+        <asp:Panel ID="pnlDebitCard" runat="server" Visible="false">
+            <label for="txtDebitCardNumber">Card Number</label>
+            <asp:TextBox ID="txtDebitCardNumber" runat="server" Placeholder="Card Number"></asp:TextBox>
+            <label for="txtDebitCardExpiry">Expiry Date (MM/YY)</label>
+            <asp:TextBox ID="txtDebitCardExpiry" runat="server" Placeholder="Expiry Date (MM/YY)"></asp:TextBox>
+            <label for="txtDebitCardCVV">CVV</label>
+            <asp:TextBox ID="txtDebitCardCVV" runat="server" Placeholder="CVV"></asp:TextBox>
+        </asp:Panel>
+            </div>
+      <div class="cart-summary">
+      <h3>Cart Summary</h3>
+      <div>Event: <asp:Label ID="lblEventName" runat="server" Text=""></asp:Label></div>
+      <div>Subtotal: <asp:Label ID="lblSubtotal" runat="server" Text="RM0.00"></asp:Label></div>
+      <div>Booking Fee: <asp:Label ID="lblBookingFee" runat="server" Text="RM0.00"></asp:Label></div>
+      <div>Operational Fee: <asp:Label ID="lblOperationalFee" runat="server" Text="RM0.00"></asp:Label></div>
+      <div>Total: <asp:Label ID="lblTotal" runat="server" Text="RM0.00"></asp:Label></div>
+      
+          <div class="payment-buttons">
+          <asp:Button ID="btnBack" runat="server" Text="Back" PostBackUrl="~/MainPage.aspx" />
+          <asp:Button ID="btnConfirmPayment" runat="server" Text="Confirm Payment" OnClick="btnConfirmPayment_Click" />
+         </div>
+        </div>
+         </div>
+      
 </asp:Content>
