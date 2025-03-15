@@ -140,7 +140,7 @@
            <h2>Choose Your Payment Method</h2>
            <div class="payment-options">
                <asp:ImageButton ID="btnVisa" runat="server" ImageUrl="/visa.png" CssClass="paymentOption" OnClick="btnVisa_Click" />
-              
+                <asp:ImageButton ID="btnMasterCard" runat="server" ImageUrl="~/Image/mastercard.png" CssClass="paymentOption" OnClick="btnMasterCard_Click" />
            </div>
         </div>
        
@@ -153,7 +153,16 @@
             <label for="txtDebitCardCVV">CVV</label>
             <asp:TextBox ID="txtDebitCardCVV" runat="server" Placeholder="CVV"></asp:TextBox>
         </asp:Panel>
+             <asp:Panel ID="pnlCreditCard" runat="server" Visible="false">
+             <label for="txtCreditCardNumber">Card Number</label>
+             <asp:TextBox ID="txtCreditCardNumber" runat="server" Placeholder="Card Number"></asp:TextBox>
+             <label for="txtCreditCardExpiry">Expiry Date (MM/YY)</label>
+             <asp:TextBox ID="txtCreditCardExpiry" runat="server" Placeholder="Expiry Date (MM/YY)"></asp:TextBox>
+             <label for="txtCreditCardCVV">CVV</label>
+             <asp:TextBox ID="txtCreditCardCVV" runat="server" Placeholder="CVV"></asp:TextBox>
+        </asp:Panel>
             </div>
+
       <div class="cart-summary">
       <h3>Cart Summary</h3>
       <div>Event: <asp:Label ID="lblEventName" runat="server" Text=""></asp:Label></div>
