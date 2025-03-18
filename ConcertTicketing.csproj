@@ -138,7 +138,6 @@
     <Content Include="Images\Venue1.jpeg" />
     <Content Include="Images\visa.png" />
     <Content Include="Images\WhatsApp Image 2024-12-30 at 01.35.19_a880b0c6.jpg" />
-    <Content Include="NewsForm.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
@@ -170,13 +169,6 @@
     </Compile>
     <Compile Include="CustomerMaster.Master.designer.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="NewsForm.aspx.cs">
-      <DependentUpon>NewsForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewsForm.aspx.designer.cs">
-      <DependentUpon>NewsForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
