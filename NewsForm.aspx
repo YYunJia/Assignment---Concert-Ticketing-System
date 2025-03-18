@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="NewsForm.aspx.cs" Inherits="ConcertTicketing.NewsForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="NewsForm.aspx.cs" Inherits="ConcertTicketing.NewsForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="StaffMainContent" runat="server">
     <div class="newsForm">
     <h1><asp:Literal ID="litFormTitle" runat="server"></asp:Literal></h1>

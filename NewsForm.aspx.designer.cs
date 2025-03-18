@@ -11,7 +11,7 @@ namespace ConcertTicketing
 {
 
 
-    public partial class NewsForm
+    public partial class NewsForm1
     {
 
         /// <summary>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ConcertTicketing
 {
-	public partial class NewsForm : System.Web.UI.Page
+	public partial class NewsForm1 : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
