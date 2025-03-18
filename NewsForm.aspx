@@ -39,5 +39,34 @@
     <label>Content 6:</label><br />
         <asp:TextBox ID="txtContent6" runat="server" TextMode="MultiLine"></asp:TextBox>
     </div>
+         <div>
+    <label>Content 7:</label><br />
+        <asp:TextBox ID="txtContent7" runat="server" TextMode="MultiLine"></asp:TextBox>
+    </div>
+    <div>
+        <label>Content Image 1:</label><br />
+        <asp:TextBox ID="txtContentImage1" runat="server"></asp:TextBox>
+    </div>
+    <div>
+        <label>Content Image 2:</label><br />
+        <asp:TextBox ID="txtContentImage2" runat="server"></asp:TextBox>
+    </div>
+    <div>
+        <label>Published By:</label><br />
+        <asp:TextBox ID="txtPublishBy" runat="server"></asp:TextBox>
+    </div>
+    <div>
+        <label>Published Date:</label><br />
+        <asp:TextBox ID="txtPublishedDate" runat="server" TextMode="Date"></asp:TextBox>
+    </div>
+    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="btn" />
+    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" CssClass="btn btn-cancel" />
+</div>
+    <br />
+    <!-- Label for displaying success or error messages -->
+    <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
+    <br />
+    <br />
+
 
 </asp:Content>
