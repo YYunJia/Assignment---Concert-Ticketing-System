@@ -74,6 +74,8 @@
     <Content Include="Design\AdminSite.css" />
     <Content Include="Design\MasterDeisgn.css" />
     <Content Include="Design\Register.css" />
+    <Content Include="Details.aspx" />
+    <Content Include="Details.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\133604343841684229.jpg" />
     <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
@@ -172,6 +174,13 @@
     </Compile>
     <Compile Include="CustomerMaster.Master.designer.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
