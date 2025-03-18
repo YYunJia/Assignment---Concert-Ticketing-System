@@ -35,7 +35,7 @@ namespace WebAssignment
                     return;
                 }
 
-                // Populate labels
+// Populate labels
                 lblEventName.Text = eventName;
                 lblSubtotal.Text = $"RM{subtotal}";
                 lblBookingFee.Text = $"RM{bookingFee}";

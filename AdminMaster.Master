@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ConcertTicketing.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <title>StarConcert - Staff</title>
+    <link rel="stylesheet" type="text/css" href="Design/MasterDeisgn.css" />
+    <link rel="stylesheet" type="text/css" href="Design/Register.css" />
+
+</head>
+<body>
+   <form id="form1" runat="server" enctype="multipart/form-data">
+        <!-- Header Section -->
+        <div id="header">
+            <div>
+                <img src="Images/logo.png" alt="StarConcert Logo" />
+            </div>
+            <div class="right-section">
+                 <!-- Login/Register Button -->
+                <asp:LinkButton ID="btnLoginRegister" runat="server" PostBackUrl="~/LoginPage.aspx" 
+                         Style="color: black; font-size: 18px; font-weight: bold; margin-right: 15px;">
+                     <span style="vertical-align: middle;">Login/Register</span>
+                </asp:LinkButton>
+
+                <!-- Profile Image Button -->
+                <asp:ImageButton ID="btnProfile" runat="server" ImageUrl="~/Images/profile.png" Width="30px" 
+                    Style="vertical-align: middle;"/>
+            </div>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="content">
+            <asp:ContentPlaceHolder ID="StaffMainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div style="padding: 20px 0; background-color: #1c1a1b; color: #f5f5f5; text-align: center;">
+                <!-- Footer Links -->
+                <p>
+                    <a href="/FAQ" style="color: #f5f5f5; text-decoration: none;">FAQ</a> | 
+                    <a href="/aboutUs" style="color: #f5f5f5; text-decoration: none;">About Us</a> | 
+                    <a href="/terms" style="color: #f5f5f5; text-decoration: none;">Terms and Conditions</a> | 
+                    <a href="/privacy" style="color: #f5f5f5; text-decoration: none;">Privacy Policy</a>
+                </p>
+        
+                <!-- Social Media Links -->  
+                <p>
+                    Follow Us: 
+                    <a href="https://www.instagram.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
+                        <img src="Images/facebook.png" alt="Facebook" class="social-icon" /> 
+                    </a> 
+                    <a href="https://www.facebook.com" target="_blank" style="color: #f5f5f5; text-decoration: none;">
+                        <img src="Images/instagram.png" alt="Instagram" class="social-icon" />
+                    </a>
+                </p>
+        
+                <!-- Copyright Notice -->
+                <p style="font-size: 12px; color: #C0C0C0; font-style: italic;">
+                    Copyright © StarConcert SDN BHD. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </form>
+
+</body>
+</html>

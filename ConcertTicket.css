@@ -1,147 +1,187 @@
-﻿.concert-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+﻿
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-    .concert-card:hover {
+.card {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffd1dc;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    min-height: 180px; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+.date {
+    text-align: center;
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+    flex-shrink: 0;
+    min-width: 70px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+    .date:hover {
+        color: #c92475;
         transform: scale(1.05);
     }
 
-.concert-date {
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    color: #ff4081;
-    min-width: 90px; 
-}
+    .date span {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+    }
 
 .day {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: bold;
-    display: block;
+    color: #fa2f95;
 }
 
 .month-year {
-    font-size: 24px; 
-    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fa2f95;
+    margin-top: 5px;
 }
 
-.time {
-    font-size: 20px; 
-    color: gray;
-}
-
-.concert-image {
+.image-container {
     flex-shrink: 0;
-    margin: 0 20px; 
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.concert-img {
-    width: 350px; 
-    height: 450px;
-    border-radius: 8px;
-    object-fit: cover;
-    border: 2px solid #ff4081;
-}
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 3px solid #ffd1dc;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.concert-details {
-    flex-grow: 1;
-    padding: 10px 15px;
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+.details {
+    flex: 1;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.title {
-    font-size: 28px; 
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.artist {
-    font-size: 24px; 
-    color: gray;
-    margin-bottom: 5px;
-}
-
-.venue {
-    font-size: 22px; 
-    font-weight: bold;
-    color: #444;
-}
-
-.concert-button {
-    text-align: right;
-}
-
-.btn-find-tickets {
-    background: #ff4081;
-    color: white;
-    border: none;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-    font-size: 16px; 
-}
-
-    .btn-find-tickets:hover {
-        background: #e6005c;
+    .details h3 {
+        margin: 0 0 5px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
     }
 
-@media (max-width: 1024px) {
-    .concert-card {
+    .details p {
+        margin: 4px 0;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.4;
+    }
+
+        .details p b {
+            color: #000;
+        }
+
+.ticket-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+
+    .ticket-button a {
+        background-color: #fa2f95;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        .ticket-button a:hover {
+            background-color: #c92475;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .ticket-button a:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+@media screen and (max-width: 768px) {
+    .card {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .concert-date, .concert-image, .concert-details, .concert-button {
-        width: 100%;
         text-align: center;
-    }
-
-    .concert-img {
-        width: 250px; 
-        height: 300px;
-        margin: 10px 0;
-    }
-
-    .btn-find-tickets {
-        width: 100%;
+        min-height: auto;
         padding: 15px;
     }
-}
 
-@media (max-width: 768px) {
-    .concert-card {
-        flex-direction: column;
-        align-items: flex-start;
+    .date {
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
     }
 
-    .concert-date, .concert-image, .concert-details, .concert-button {
-        width: 100%;
-        text-align: center;
+    .image-container {
+        width: 100px;
+        height: 100px;
     }
 
-    .concert-img {
-        width: 180px; 
-        height: 220px;
-        margin: 10px 0;
+    .details h3 {
+        white-space: normal;
+        -webkit-line-clamp: 3;
     }
 
-    .btn-find-tickets {
-        width: 100%;
-        padding: 12px;
+    .ticket-button {
+        padding-left: 0;
+        margin-top: 10px;
     }
 
-    .title, .artist, .venue {
-        font-size: 18px; 
-    }
+        .ticket-button a {
+            padding: 10px 16px; 
+            font-size: 0.9em;
+        }
 }

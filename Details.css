@@ -1,0 +1,26 @@
+﻿.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-content {
+    flex: 70%;
+    overflow-y: auto;
+    max-height: 80vh; /* Adjust as needed */
+    padding-right: 20px;
+}
+
+.right-content {
+    flex: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
