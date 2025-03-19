@@ -9,7 +9,10 @@ namespace ConcertTicketing
 {
 	public partial class Details : System.Web.UI.Page
 	{
-		protected void Page_Load(object sender, EventArgs e)
+
+        private string connectionString = ConfigurationManager.ConnectionStrings["AConnectionString"].ConnectionString;
+        private string eventId;
+        protected void Page_Load(object sender, EventArgs e)
 		{
 
 		}
