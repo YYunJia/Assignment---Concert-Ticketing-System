@@ -28,5 +28,16 @@ namespace ConcertTicketing
                 return builder.ToString();
             }
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            string email = txtEmail.Text.Trim();
+            string password = txtPwd.Text.Trim();
+
+            // Attempt to get the user's role based on their credentials
+            string role = ValidateUserCredentialsAndGetRole(email, password);
+
+            
+        }
     }
 }
