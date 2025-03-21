@@ -7,8 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace ConcertTicketing
 {
-	public partial class NewsForm : System.Web.UI.Page
-	{
+    public partial class NewsForm : System.Web.UI.Page
+    {
         public partial class NewsForm : System.Web.UI.Page
         {
             protected void Page_Load(object sender, EventArgs e)
@@ -64,5 +64,63 @@ namespace ConcertTicketing
                 }
             }
 
+            protected void btnSave_Click(object sender, EventArgs e)
+            {
+                try
+                {
+                    string newsId = hfNewsId.Value;
+                    if (string.IsNullOrEmpty(newsId))
+                    {
+                        // Create Mode: Insert new news
+                        InsertNews();
+                        lblMessage.Text = "News has been added successfully!";
+                        lblMessage.ForeColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        // Edit Mode: Update existing news
+                        UpdateNews(newsId);
+                        lblMessage.Text = "News has been updated successfully!";
+                        lblMessage.ForeColor = System.Drawing.Color.Green;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblMessage.Text = "An error occurred: " + ex.Message;
+                    lblMessage.ForeColor = System.Drawing.Color.Red;
+                }
+            }
+
+
+            private void InsertNews()
+            {
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\STARCONCERT.mdf;Integrated Security=True";
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    // Remove NewsId from the INSERT query since it's auto-generated
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO News (Title, BackgroundImage, preDesc, Content1, Content2, Content3, ContentImage1, ContentImage2, PublishBy, PublishedDate) VALUES (@Title, @BackgroundImage, @preDesc, @Content1, @Content2, @Content3, @ContentImage1, @ContentImage2, @PublishBy, @PublishedDate)", con))
+                    {
+                        cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
+                        cmd.Parameters.AddWithValue("@BackgroundImage", txtBackgroundImage.Text);
+                        cmd.Parameters.AddWithValue("@preDesc", txtPreDescr.Text);
+                        cmd.Parameters.AddWithValue("@Content1", txtContent1.Text);
+                        cmd.Parameters.AddWithValue("@Content2", txtContent2.Text);
+                        cmd.Parameters.AddWithValue("@Content3", txtContent3.Text);
+                        cmd.Parameters.AddWithValue("@ContentImage1", txtContentImage1.Text);
+                        cmd.Parameters.AddWithValue("@ContentImage2", txtContentImage2.Text);
+                        cmd.Parameters.AddWithValue("@Content4", txtContent4.Text);
+                        cmd.Parameters.AddWithValue("@Content5", txtContent5.Text);
+                        cmd.Parameters.AddWithValue("@Content6", txtContent6.Text);
+                        cmd.Parameters.AddWithValue("@Content7", txtContent7.Text);
+                        cmd.Parameters.AddWithValue("@PublishBy", txtPublishBy.Text);
+                        cmd.Parameters.AddWithValue("@PublishedDate", txtPublishedDate.Text);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+
+
         }
     }
+}
