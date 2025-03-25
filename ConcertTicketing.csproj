@@ -77,7 +77,6 @@
     <Content Include="Design\Register.css" />
     <Content Include="Details.aspx" />
     <Content Include="Details.css" />
-    <Content Include="Global.asax" />
     <Content Include="Images\133604343841684229.jpg" />
     <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
     <Content Include="Images\275073240_329766082466790_6972892228753778446_n.png" />
@@ -182,9 +181,6 @@
     </Compile>
     <Compile Include="Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
