@@ -72,6 +72,7 @@
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
     <Content Include="Design\AdminSite.css" />
+    <Content Include="Design\createNews.css" />
     <Content Include="Design\MasterDeisgn.css" />
     <Content Include="Design\Register.css" />
     <Content Include="Global.asax" />

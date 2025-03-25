@@ -119,8 +119,42 @@ namespace ConcertTicketing
                     }
                 }
             }
+            private void UpdateNews(string newsId)
+            {
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\STARCONCERT.mdf;Integrated Security=True";
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("UPDATE News SET Title = @Title, BackgroundImage = @BackgroundImage, preDesc = @preDesc, Content1 = @Content1, Content2 = @Content2, Content3 = @Content3, ContentImage1 = @ContentImage1, ContentImage2 = @ContentImage2, PublishBy = @PublishBy, PublishedDate = @PublishedDate WHERE NewsId = @NewsId", con))
+                    {
+                        cmd.Parameters.AddWithValue("@NewsId", newsId);
+                        cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
+                        cmd.Parameters.AddWithValue("@BackgroundImage", txtBackgroundImage.Text);
+                        cmd.Parameters.AddWithValue("@preDesc", txtPreDescr.Text);
+                        cmd.Parameters.AddWithValue("@Content1", txtContent1.Text);
+                        cmd.Parameters.AddWithValue("@Content2", txtContent2.Text);
+                        cmd.Parameters.AddWithValue("@Content3", txtContent3.Text);
+                        cmd.Parameters.AddWithValue("@Content4", txtContent4.Text);
+                        cmd.Parameters.AddWithValue("@Content5", txtContent5.Text);
+                        cmd.Parameters.AddWithValue("@Content6", txtContent6.Text);
+                        cmd.Parameters.AddWithValue("@Content7", txtContent7.Text);
+                        cmd.Parameters.AddWithValue("@ContentImage1", txtContentImage1.Text);
+                        cmd.Parameters.AddWithValue("@ContentImage2", txtContentImage2.Text);
+                        cmd.Parameters.AddWithValue("@PublishBy", txtPublishBy.Text);
+                        cmd.Parameters.AddWithValue("@PublishedDate", txtPublishedDate.Text);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
 
-
+            protected void btnCancel_Click(object sender, EventArgs e)
+            {
+                Response.Redirect("staffDashboard.aspx");
+            }
         }
+
+
+
     }
+}
 }
