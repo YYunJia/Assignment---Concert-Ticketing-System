@@ -18,14 +18,26 @@
                 ForeColor="Red"
                 ErrorMessage="Please enter a valid email address."
                 Display="Dynamic" />
-            
+            <asp:RequiredFieldValidator 
+                ID="rfvEmail" 
+                runat="server" 
+                ControlToValidate="txtEmail" 
+                ForeColor="Red" 
+                ErrorMessage="Email Address is required." 
+                Display="Dynamic" />
         </div>
 
         <!-- Password Field -->
         <div class="input-field">
             <label for="txtPwd">Password <span style="color: red;">*</span></label>
             <asp:TextBox ID="txtPwd" runat="server" TextMode="Password" CssClass="form-control" />
-            
+            <asp:RequiredFieldValidator 
+                ID="regPassword" 
+                runat="server" 
+                ControlToValidate="txtPwd" 
+                ForeColor="Red" 
+                ErrorMessage="Password is required." 
+                Display="Dynamic" />
             <asp:RegularExpressionValidator
                 ID="regPasswordStrength"
                 runat="server"

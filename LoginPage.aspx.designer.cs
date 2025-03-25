@@ -33,6 +33,15 @@ namespace WebAssignment
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regEmail;
 
         /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
         /// txtPwd control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace WebAssignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPwd;
+
+        /// <summary>
+        /// regPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator regPassword;
 
         /// <summary>
         /// regPasswordStrength control.
