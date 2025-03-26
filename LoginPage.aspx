@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMaster.Master" AutoEventWireup="true" 
-    CodeBehind="LoginPage.aspx.cs" Inherits="WebAssignment.login" %>
+    CodeBehind="LoginPage.aspx.cs" Inherits="ConcertTicketing.login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="login-container">

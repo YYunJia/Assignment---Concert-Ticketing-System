@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebAssignment
+namespace ConcertTicketing
 {
 
 
