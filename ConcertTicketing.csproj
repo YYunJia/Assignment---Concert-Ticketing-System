@@ -71,6 +71,7 @@
     </Content>
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
+    <Content Include="CreateEvent.aspx" />
     <Content Include="Design\AdminSite.css" />
     <Content Include="Design\createNews.css" />
     <Content Include="Design\MasterDeisgn.css" />
@@ -167,6 +168,13 @@
     </Compile>
     <Compile Include="ConcertTicket.aspx.designer.cs">
       <DependentUpon>ConcertTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.designer.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerMaster.Master.cs">
       <DependentUpon>CustomerMaster.Master</DependentUpon>
