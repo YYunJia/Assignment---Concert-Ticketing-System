@@ -32,4 +32,31 @@
         <asp:RequiredFieldValidator ID="rfvEventDetails" ForeColor="Red" runat="server" ControlToValidate="txtEventDetails"
             ErrorMessage="Event Details are required!"  CssClass="error" Display="Dynamic" /><br /><br />
 
+           <label for="ddlEventStatus">Event Status:</label><br />
+        <asp:DropDownList ID="ddlEventStatus" runat="server"  CssClass="aspDropDownList">
+            <asp:ListItem Text="-- Select Status --" Value="scheduled"></asp:ListItem>
+            <asp:ListItem Text="Upcoming" Value="scheduled"></asp:ListItem>
+            <asp:ListItem Text="Ongoing" Value="cancelled"></asp:ListItem>
+        </asp:DropDownList><br />
+        <asp:RequiredFieldValidator ID="rfvEventStatus" runat="server" ControlToValidate="ddlEventStatus"
+            InitialValue="0" ErrorMessage="Please select an event status!" ForeColor="Red" CssClass="error" Display="Dynamic" /><br /><br />
+
+
+        <label for="ddlVenue">Select Venue:</label><br />
+        <asp:DropDownList ID="ddlVenue" runat="server" DataTextField="venueName" DataValueField="venueId" AutoPostBack="true"  CssClass="aspDropDownList">
+            <asp:ListItem Text="Select Venue" Value=""></asp:ListItem>
+        </asp:DropDownList><br />
+        <asp:RequiredFieldValidator ID="rfvVenue" runat="server" ControlToValidate="ddlVenue"
+            InitialValue="0" ErrorMessage="Please select a venue!" ForeColor="Red" CssClass="error" Display="Dynamic" /><br />
+
+        <!-- New Image Upload Field -->
+        <asp:Label ID="lblUploadImage" runat="server" Text="Upload Background Image:"></asp:Label>
+        <br /><br />
+        <asp:FileUpload ID="fileUploadImage" runat="server" CssClass="aspFileUpload"/><br />
+
+        <!-- New Detail Image Upload Field -->
+        <asp:Label ID="lblUploadDetailImage" runat="server" Text="Upload Detail Image:"></asp:Label><br /><br />
+        <asp:FileUpload ID="fileUploadDetailImage" runat="server" CssClass="aspFileUpload"/><br />
+
+
 </asp:Content>
