@@ -58,5 +58,51 @@
         <asp:Label ID="lblUploadDetailImage" runat="server" Text="Upload Detail Image:"></asp:Label><br /><br />
         <asp:FileUpload ID="fileUploadDetailImage" runat="server" CssClass="aspFileUpload"/><br />
 
+          <!-- Seat Category Fields -->
+        <h3>Seat Categories</h3>
+        <label for="txtVVIPQuantity">VVIP Quantity:</label><br />
+        <asp:TextBox ID="txtVVIPQuantity" runat="server" CssClass="form-control" /><br />
+        <asp:RequiredFieldValidator ID="rfvVVIPQuantity" runat="server" ControlToValidate="txtVVIPQuantity"
+            ErrorMessage="VVIP Quantity is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revVVIPQuantity" runat="server" ControlToValidate="txtVVIPQuantity"
+            ValidationExpression="^\d+$" ErrorMessage="Must be a number!" ForeColor="Red" Display="Dynamic" /><br />
+
+        <label for="txtVVIPPrice">VVIP Price:</label><br />
+        <asp:TextBox ID="txtVVIPPrice" runat="server" CssClass="form-control" /><br />
+        <asp:RequiredFieldValidator ID="rfvVVIPPrice" runat="server" ControlToValidate="txtVVIPPrice"
+            ErrorMessage="VVIP Price is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revVVIPPrice" runat="server" ControlToValidate="txtVVIPPrice"
+            ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
+
+       
+        <label for="txtVIPQuantity">VIP Quantity:</label><br />
+        <asp:TextBox ID="txtVIPQuantity" runat="server"></asp:TextBox><br />
+        <asp:RequiredFieldValidator ID="rfvVIPQuantity" runat="server" ControlToValidate="txtVIPQuantity"
+            ErrorMessage="VIP Quantity is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revVIPQuantity" runat="server" ControlToValidate="txtVIPQuantity"
+            ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
+
+        <label for="txtVIPPrice">VIP Price:</label><br />
+        <asp:TextBox ID="txtVIPPrice" runat="server"></asp:TextBox><br />
+        <asp:RequiredFieldValidator ID="rfvVIPPrice" runat="server" ControlToValidate="txtVIPPrice"
+            ErrorMessage="VIP Price is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revVIPPrice" runat="server" ControlToValidate="txtVIPPrice"
+            ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
+
+        <label for="txtStandardQuantity">Standard Quantity:</label><br />
+        <asp:TextBox ID="txtStandardQuantity" runat="server"></asp:TextBox><br />
+        <asp:RequiredFieldValidator ID="rfvStandardQuantity" runat="server" ControlToValidate="txtStandardQuantity"
+            ErrorMessage="Standard Quantity is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revStandardQuantity" runat="server" ControlToValidate="txtStandardQuantity"
+            ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
+
+        <label for="txtStandardPrice">Standard Price:</label><br />
+        <asp:TextBox ID="txtStandardPrice" runat="server"></asp:TextBox><br />
+        <asp:RequiredFieldValidator ID="rfvStandardPrice" runat="server" ControlToValidate="txtStandardPrice"
+            ErrorMessage="VVIP Price is required!" ForeColor="Red" Display="Dynamic" /><br />
+        <asp:RegularExpressionValidator ID="revStandardPrice" runat="server" ControlToValidate="txtStandardPrice"
+            ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
+
+
 
 </asp:Content>
