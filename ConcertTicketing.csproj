@@ -69,6 +69,7 @@
     <Content Include="App_Data\STARCONCERT_log.ldf">
       <DependentUpon>STARCONCERT.MDF</DependentUpon>
     </Content>
+    <Content Include="Booking.aspx" />
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
     <Content Include="CreateEvent.aspx" />
@@ -161,6 +162,13 @@
     </Compile>
     <Compile Include="AdminSite.aspx.designer.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConcertTicket.aspx.cs">
       <DependentUpon>ConcertTicket.aspx</DependentUpon>
