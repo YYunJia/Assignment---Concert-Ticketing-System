@@ -73,6 +73,9 @@
     <Content Include="Cart.aspx" />
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
+
+    <Content Include="confirmation.aspx" />
+
     <Content Include="CreateEvent.aspx" />
     <Content Include="Design\AdminSite.css" />
     <Content Include="Design\createNews.css" />
