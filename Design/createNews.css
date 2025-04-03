@@ -1,0 +1,423 @@
+﻿/* Scoped Dashboard Container */
+.dashboard-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Text */
+.welcome-text {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Layout: Navigation on the left, content on the right */
+.dashboard-layout {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Navigation Section */
+.navigation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+    .navigation .category-button {
+        padding: 10px 20px;
+        border: none;
+        background: #f875aa; /* Pink color */
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        text-align: left;
+    }
+
+        .navigation .category-button:hover {
+            background-color: #fa2f95; /* Darker pink */
+            transform: scale(1.05);
+        }
+
+        .navigation .category-button.active {
+            background-color: #c71585; /* Active state pink */
+        }
+
+/* Content Section */
+.content {
+    flex: 3;
+    padding-left: 20px;
+}
+
+/* Section for Reports and Parameters */
+.section {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    .section.active {
+        display: block;
+    }
+
+    .section h3 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Styling for the RadioButtonList */
+    .section .input-field {
+        width: 200px;
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    /* Buttons for generating reports */
+    .section .input-field, .section button {
+        margin-bottom: 15px;
+    }
+
+    .section button {
+        padding: 10px 20px;
+        border: none;
+        background: #5c6bc0; /* Blue color */
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+        .section button:hover {
+            background-color: #3f4c8b; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+/* GridView - Report Results */
+.report-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .report-grid th, .report-grid td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .report-grid th {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+
+    .report-grid td {
+        background-color: #fff;
+        color: #666;
+    }
+
+    .report-grid tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .report-grid tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Empty Data Text */
+    .report-grid .empty-data-text {
+        text-align: center;
+        color: #777;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+/* General Styling for Tables */
+.grid-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .grid-view th, .grid-view td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .grid-view th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    .grid-view td {
+        background-color: #fff;
+    }
+
+    .grid-view tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .grid-view tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .grid-view .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+        .grid-view .button:hover {
+            background-color: #45a049;
+        }
+
+    /* Styling the Buttons in Tables */
+    .grid-view .btn-edit {
+        background-color: #008CBA; /* Blue */
+    }
+
+    .grid-view .btn-delete {
+        background-color: #f44336; /* Red */
+    }
+
+    .grid-view .btn-edit:hover {
+        background-color: #007bb5;
+    }
+
+    .grid-view .btn-delete:hover {
+        background-color: #e53935;
+    }
+
+
+.category-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f875aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+    .category-button:hover {
+        background-color: #FFB6C1;
+    }
+
+.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+
+
+
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], input[type="datetime-local"], textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+button, .btn {
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover, .btn:hover {
+        background-color: #0056b3;
+    }
+
+.gridview-container {
+    margin-bottom: 20px;
+}
+
+.grid-view {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .grid-view th, .grid-view td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .grid-view .btn {
+        margin-right: 5px;
+    }
+
+#resultMessage {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Specific Styling for Create News Section */
+#createNewsSection {
+    background-color: #e9f7ef;
+}
+
+    #createNewsSection input[type="text"],
+    #createNewsSection input[type="date"],
+    #createNewsSection textarea {
+        width: 100%;
+    }
+
+    #createNewsSection .btn {
+        background-color: #28a745;
+    }
+
+/* Specific Styling for Modify News Section */
+#modifyNewsSection {
+    background-color: #f0f8ff;
+}
+
+    #modifyNewsSection .grid-view {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+/* Specific Styling for Create Event Section */
+#createEventSection {
+    background-color: #fef4e4;
+}
+
+    #createEventSection label {
+        margin-bottom: 8px;
+    }
+
+    #createEventSection input[type="text"],
+    #createEventSection input[type="date"],
+    #createEventSection input[type="datetime-local"],
+    #createEventSection textarea {
+        width: 100%;
+    }
+
+    #createEventSection .btn {
+        background-color: #ffc107;
+    }
+
+    #createEventSection h3 {
+        margin-top: 30px;
+    }
+
+/* Specific Styling for Modify Event Section */
+#modifyEventSection {
+    background-color: #d3f8e2;
+}
+
+    #modifyEventSection label {
+        margin-bottom: 8px;
+    }
+
+    #modifyEventSection input[type="text"],
+    #modifyEventSection input[type="datetime-local"],
+    #modifyEventSection textarea {
+        width: 100%;
+    }
+
+    #modifyEventSection .btn {
+        background-color: #17a2b8;
+    }
+
+/* Specific Styling for Delete Event Section */
+#deleteEventSection {
+    background-color: #f8d7da;
+}
+
+    #deleteEventSection .btn {
+        background-color: #dc3545;
+    }
+
+        #deleteEventSection .btn:hover {
+            background-color: #c82333;
+        }
+
+    #deleteEventSection label {
+        font-weight: bold;
+    }
+
+    #deleteEventSection .grid-view {
+        width: 100%;
+    }
+
+    #deleteEventSection input[type="text"],
+    #deleteEventSection input[type="date"] {
+        width: 100%;
+    }
+
+/* Image Previews in Modify Event Section */
+#imgPreview, #imgDetailPreview, #imgSeatSelectPreview {
+    max-height: 200px;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+/* Error Message styling */
+.lblError {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
+
+.lblSuccess {
+    color: green;
+    display: block;
+    margin-top: 10px;
+}

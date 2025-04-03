@@ -7,7 +7,7 @@
 .left-content {
     flex: 70%;
     overflow-y: auto;
-    max-height: 80vh; /* Adjust as needed */
+    max-height: 80vh; 
     padding-right: 20px;
 }
 
@@ -24,3 +24,60 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+.event-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-pricing {
+    text-align: center;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .price-row:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .price-row h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin: 0;
+    }
+
+    .price-row .price {
+        font-size: 1.5em;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+.buy-ticket-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+    .buy-ticket-btn:hover {
+        background-color: #0056b3;
+    }
+

@@ -69,16 +69,20 @@
     <Content Include="App_Data\STARCONCERT_log.ldf">
       <DependentUpon>STARCONCERT.MDF</DependentUpon>
     </Content>
+    <Content Include="Booking.aspx" />
+    <Content Include="Cart.aspx" />
     <Content Include="ConcertTicket.aspx" />
     <Content Include="ConcertTicket.css" />
+
     <Content Include="confirmation.aspx" />
+
     <Content Include="CreateEvent.aspx" />
     <Content Include="Design\AdminSite.css" />
+    <Content Include="Design\createNews.css" />
     <Content Include="Design\MasterDeisgn.css" />
     <Content Include="Design\Register.css" />
     <Content Include="Details.aspx" />
     <Content Include="Details.css" />
-    <Content Include="Global.asax" />
     <Content Include="Images\133604343841684229.jpg" />
     <Content Include="Images\272750568_3217694141889029_3866376742898613197_n.jpg" />
     <Content Include="Images\275073240_329766082466790_6972892228753778446_n.png" />
@@ -146,6 +150,7 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="NewsForm.aspx" />
     <Content Include="Payment.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -162,6 +167,20 @@
     </Compile>
     <Compile Include="AdminSite.aspx.designer.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConcertTicket.aspx.cs">
       <DependentUpon>ConcertTicket.aspx</DependentUpon>
@@ -191,9 +210,6 @@
     <Compile Include="Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +230,13 @@
     </Compile>
     <Compile Include="Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
