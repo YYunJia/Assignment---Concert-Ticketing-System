@@ -103,6 +103,17 @@
         <asp:RegularExpressionValidator ID="revStandardPrice" runat="server" ControlToValidate="txtStandardPrice"
             ValidationExpression="^\d+(\.\d{1,2})?$" ErrorMessage="Must be a valid price!" ForeColor="Red" Display="Dynamic" /><br />
 
+          <!-- Seat Select Image Upload Field -->
+        <asp:Label ID="lblUploadSeatSelectImage" runat="server" Text="Upload Seat Map Image:"></asp:Label><br /><br />
+        <asp:FileUpload ID="fileUploadSeatSelectImage" runat="server" CssClass="aspFileUpload"/><br />
 
+
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary"
+            OnClientClick="return confirmSubmission();"
+            OnClick="btnSubmit_Click" />
+    </div>
+
+    <!-- Display messages -->
+    <div id="resultMessage" runat="server" style="color: green; margin-top: 20px;"></div>
 
 </asp:Content>
