@@ -121,5 +121,37 @@ namespace ConcertTicketing
             }
         }
 
+        private string UploadImage(FileUpload fileUploadControl)
+        {
+            if (fileUploadControl.HasFile)
+            {
+                string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+                string fileExtension = Path.GetExtension(fileUploadControl.FileName).ToLower();
+                if (Array.IndexOf(allowedExtensions, fileExtension) < 0)
+                {
+                    resultMessage.InnerText = "Only JPG, JPEG, PNG, and GIF files are allowed.";
+                    return null;
+                }
+
+                try
+                {
+                    string filename = Guid.NewGuid() + fileExtension; // Unique filename
+                    string folderPath = Server.MapPath("~/Image/");
+                    if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+                    string filePath = "Image/" + filename;
+                    fileUploadControl.SaveAs(Path.Combine(folderPath, filename));
+                    return filePath;
+                }
+                catch (Exception ex)
+                {
+                    resultMessage.InnerText = "Image upload error: " + ex.Message;
+                }
+            }
+            return null;
+        }
+
+        
+
+
     }
 }
