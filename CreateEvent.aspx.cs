@@ -149,8 +149,30 @@ namespace ConcertTicketing
             }
             return null;
         }
+        private void InsertSeatCategory(SqlConnection conn, SqlTransaction transaction, string venueId, string eventId, string category, int quantity, decimal price)
+        {
+            using (SqlCommand seatCmd = new SqlCommand("INSERT INTO [dbo].[Seat] ([seatNo], [category], [price], [venueId], [eventId], [status]) VALUES (@seatNo, @category, @price, @venueId, @eventId, 'Available');", conn, transaction))
+            {
+                seatCmd.Parameters.Add("@seatNo", SqlDbType.VarChar);
+                seatCmd.Parameters.Add("@category", SqlDbType.VarChar);
+                seatCmd.Parameters.Add("@price", SqlDbType.Decimal);
+                seatCmd.Parameters.Add("@venueId", SqlDbType.VarChar);
+                seatCmd.Parameters.Add("@eventId", SqlDbType.VarChar);
 
-        
+                for (int i = 1; i <= quantity; i++)
+                {
+                    seatCmd.Parameters["@seatNo"].Value = $"{category}-{i}";
+                    seatCmd.Parameters["@category"].Value = category;
+                    seatCmd.Parameters["@price"].Value = price;
+                    seatCmd.Parameters["@venueId"].Value = venueId;
+                    seatCmd.Parameters["@eventId"].Value = eventId;
+                    seatCmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
 
 
     }
