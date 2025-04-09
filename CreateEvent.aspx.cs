@@ -136,9 +136,9 @@ namespace ConcertTicketing
                 try
                 {
                     string filename = Guid.NewGuid() + fileExtension; // Unique filename
-                    string folderPath = Server.MapPath("~/Image/");
+                    string folderPath = Server.MapPath("~/Images/");
                     if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
-                    string filePath = "Image/" + filename;
+                    string filePath = "Images/" + filename;
                     fileUploadControl.SaveAs(Path.Combine(folderPath, filename));
                     return filePath;
                 }
